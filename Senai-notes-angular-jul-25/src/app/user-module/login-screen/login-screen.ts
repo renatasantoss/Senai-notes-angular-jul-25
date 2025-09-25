@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login-screen',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './login-screen.html',
   styleUrl: './login-screen.css'
 })
