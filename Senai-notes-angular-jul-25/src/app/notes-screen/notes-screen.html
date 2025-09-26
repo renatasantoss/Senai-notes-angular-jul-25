@@ -1,70 +1,140 @@
-<div class="notes-app">
-  <!-- Sidebar -->
+
+  <!-- Topo -->
+  <header class="top-bar">
+    <div class="logo">
+    <img src="imgs/logo.png" alt="logo-notes">
+    </div>
+    <div class="search-area">
+      <input type="text" placeholder="Search by title, content, or tags…" />
+      <button class="power-btn">⏻</button>
+    </div>
+  </header>
+
+  <div class="notes-app">
+  <!-- Conteúdo principal -->
   <aside class="sidebar">
-    <button class="btn-create" (click)="createNew()">+ Create New Note</button>
+    <button class="btn-create">+ Create New Note</button>
 
     <div class="notes-list">
-      <div
-        class="note-item"
-        *ngFor="let n of notes"
-        [class.active]="selectedNote?.id === n.id"
-        (click)="selectNote(n)">
-        <div class="thumb">
-          <!-- placeholder thumbnail -->
-          <div class="thumb-placeholder" *ngIf="!n.thumbnail">{{ n.title.charAt(0) }}</div>
-        </div>
+      <div class="note-item active">
+        <div class="thumb"></div>
         <div class="meta">
-          <div class="note-title">{{ n.title }}</div>
-          <div class="note-tags" *ngIf="n.tags?.length">{{ tagsString(n) }}</div>
-          <div class="note-date">{{ n.date }}</div>
+          <div class="note-title">React Performance Optimization</div>
+          <div class="note-tags">
+            <span class="tag">Dev</span>
+            <span class="tag">React</span>
+          </div>
+          <div class="note-date">25 Set 2025</div>
+        </div>
+      </div>
+
+      <div class="note-item">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="note-title">Japan Travel Planning</div>
+          <div class="note-tags">
+            <span class="tag">Travel</span>
+            <span class="tag">Personal</span>
+          </div>
+          <div class="note-date">22 Set 2025</div>
+        </div>
+      </div>
+   
+      <div class="note-item">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="note-title">Favorite Pasta Recipes</div>
+          <div class="note-tags">
+            <span class="tag">Cooking</span>
+            <span class="tag">Recipes</span>
+          </div>
+          <div class="note-date">22 Set 2025</div>
         </div>
       </div>
     </div>
+
+      <div class="note-item">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="note-title">Weekly Workout Plan</div>
+          <div class="note-tags">
+            <span class="tag">Dev</span>
+            <span class="tag">React</span>
+          </div>
+          <div class="note-date">22 Set 2025</div>
+        </div>
+      </div>
+
+      <div class="note-item">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="note-title">Meal Prep Ideas</div>
+          <div class="note-tags">
+            <span class="tag">Cooking</span>
+            <span class="tag">Health</span>
+            <span class="tag">Recipes</span>
+          </div>
+          <div class="note-date">22 Set 2025</div>
+        </div>
+      </div>
+
+      <div class="note-item">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="note-title">Reading List</div>
+          <div class="note-tags">
+            <span class="tag">Personal</span>
+            <span class="tag">Dev</span>
+          </div>
+          <div class="note-date">22 Set 2025</div>
+        </div>
+      </div>
+
+      <div class="note-item">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="note-title">Fitness Goals 2025</div>
+          <div class="note-tags">
+            <span class="tag">Fitness</span>
+            <span class="tag">Health</span>
+            <span class="tag">Personal</span>
+          </div>
+          <div class="note-date">22 Set 2025</div>
+        </div>
+      </div>
+
+
   </aside>
 
-  <!-- Main content -->
   <main class="content">
-    <div *ngIf="selectedNote; else emptyState" class="note-view">
+    <div class="note-view">
+    <img src="imgs/Rectangle 44.png" alt="img-notes">
       <div class="cover">
-        <!-- imagem de capa simples -->
         <div class="cover-image">
-          <!-- Pode usar [style.backgroundImage] para usar selectedNote.cover -->
           <svg viewBox="0 0 800 150" preserveAspectRatio="none" class="svg-cover">
-            <rect width="100%" height="100%" fill="#0f172a"></rect>
-            <g fill="#0ea5e9" font-size="48" font-family="monospace">
-              <text x="30" y="90">React</text>
-            </g>
           </svg>
         </div>
       </div>
 
       <div class="note-head">
-        <h1 class="note-title-display">{{ selectedNote.title }}</h1>
-
+        <h1 class="note-title-display">React Performance Optimization</h1>
         <div class="note-meta-row">
           <div class="tags">
-            <span class="tag" *ngFor="let t of selectedNote.tags">{{ t }}</span>
+            <span class="tag">Dev</span>
+            <span class="tag">React</span>
           </div>
-          <div class="last-edited">Last edited <strong>{{ selectedNote.date }}</strong></div>
+          <div class="last-edited">Last edited 25 Set 2025</div>
         </div>
       </div>
 
-      <form [formGroup]="form" class="editor">
-        <label class="sr-only">Title</label>
-        <input formControlName="title" class="input-title" />
+      <form class="editor">
 
-        <label class="sr-only">Content</label>
-        <textarea formControlName="content" rows="12" class="text-editor"></textarea>
-
+        <textarea rows="12" class="text-editor" placeholder="Escreva sua nota..."></textarea>
         <div class="editor-footer">
-          <button type="button" class="btn-primary" (click)="save()">Save Note</button>
-          <button type="button" class="btn-ghost" (click)="cancel()">Cancel</button>
+          <button type="button" class="btn-primary">Save Note</button>
+          <button type="button" class="btn-ghost">Cancel</button>
         </div>
       </form>
     </div>
-
-    <ng-template #emptyState>
-      <div class="empty">Selecione ou crie uma nota para visualizar/editar.</div>
-    </ng-template>
   </main>
 </div>
