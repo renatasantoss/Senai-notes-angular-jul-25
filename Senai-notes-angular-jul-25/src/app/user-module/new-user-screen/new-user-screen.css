@@ -1,45 +1,89 @@
 .page-container{
     display: flex;
-}
-.logo{
-    
-    background-size: cover;
-    background-position: 0px -100px;
-    width: 50vw; /*50 % do tamanho horizontal do monitor*/
+    align-items: center; /*Alinha os itens no centro horizontalmente*/
+    justify-content: center; /*Alinha os itens no centro verticalmente*/
+    background-color: #F3F5F8;
+    width: 100vw; /*50 % do tamanho horizontal do monitor*/
     height: 100vh; /*50% do tamanho vertical do monitor*/
+    
 }
 
 .login-container {
-    width: 50vw; /*50 % do tamanho horizontal do monitor*/
-    height: 100vh; /*50% do tamanho vertical do monitor*/
     display: flex; /*Flexbox para alinhar os itens*/
     flex-direction: column; /*Coluna para alinhar os itens verticalmente*/
     align-items: center; /*Alinha os itens no centro horizontalmente*/
     justify-content: center; /*Alinha os itens no centro verticalmente*/
+    background-color: white;
+    width: 600px;
+    height: 600px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 1px;
   }
 
   .inpt {
   
     padding: 18px;
     background-color: rgba(128, 128, 128, 0.014);
-    width: 377px;
+    width: 400px;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-bottom: 16px;
     
     
     
+    
 }
 
 .titulo {
-    font-size: 50px;
+    font-size: 24px;
     font-weight: 400;
     margin-bottom: 16px;
+    font-weight: bold;
   }
 
   .text {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     margin-bottom: 16px;
 
+  }
+
+  .texts{
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .text2{
+
+   text-align: left;
+   margin: 6px;
+   font-size: 14px;
+  }
+
+  .btn{
+    background-color: #335CFF;
+    width: 400px;
+    height: 44px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    color: white;
+    font-size: 14px;
+    margin-top: 16px;
+    
+  }
+
+  .img{
+    width: 200px;
+    height: 35px;
+    margin-bottom: 16px;
+  }
+
+  .link{
+    margin-top: 32px;
+    margin-bottom: ;
+    
   }
