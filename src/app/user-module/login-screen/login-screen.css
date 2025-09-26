@@ -3,32 +3,23 @@
 .titulo {
 
     font-weight: 400;
-    font-size: 76px;
-    margin-bottom: 16px;
+    font-size: 65px;
+    margin-bottom: 10px;
     align-items: center;
-
-
-}
-
-.subtitulo {
-
-    margin-left: -30px;
-    text-align: left;
-    margin-top: -20px;
-    font-size: 16px;
-
+   
 
 }
+ .subtitulo {
+
+margin-bottom: 10px;
 
 
+ }
 
 .logo-image {
     align-items: center;
-
-    background-image: url("/imgs/Rectangle\ 1.png");
     background-size: cover;
     background-position: 0px -100px;
-
     width: 50vw;
     /* 50% da largura do monitor */
     height: 100vh;
@@ -43,15 +34,17 @@
     /* um ao lado do outro */
     align-items: center;
     justify-content: center;
+    background-color: #F3F5F8;
+    height: 100vh;
 
 }
 
 .login-tela {
 
-
+    background-color: white;
     width: 50vw;
     /* 50% da largura do monitor */
-    height: 100vh;
+    height: 80vh;
     /* 100% do altura da tela */
     /* Kit sobrevivência da centralização */
     display: flex;
@@ -66,26 +59,7 @@
 
 }
 
-.classe {
-    /* Com ponto antes */
 
-}
-
-#id {
-    /* Com hashtag antes */
-
-}
-
-img {
-    /* Tags, sem nenhum prefixo */
-
-}
-
-.login-container img {
-
-    height: 60px;
-
-}
 
 .inpt {
 
@@ -93,7 +67,7 @@ img {
     /* Margem interna */
     background-color: #F7F9FB;
     /* Define a cor de fundo */
-    width: 377px;
+    width: 500px;
     /* Define a largura */
     border: 1px solid #ccc;
     /* Define a borda */
@@ -112,7 +86,7 @@ img {
     /* Cor da fonte */
     border: none;
     /*altura*/
-    width: 377px;
+    width: 500px;
     /*largura*/
     border-radius: 10px;
     /* Arredonda as bordas */
@@ -146,12 +120,13 @@ img {
 
 .imgss {
 
+    width: 300px;
+    height: 100px;
+
+}
+
+.link {
+
+    margin-top: 35px;
     
-    margin-left: -30px;
-    text-align: left;
-    margin-bottom: -20px;
-    
-
-
-
 }
