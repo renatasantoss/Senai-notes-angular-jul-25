@@ -1,52 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 .titulo {
-    
-    font-weight: 400; 
+
+    font-weight: 400;
     font-size: 76px;
     margin-bottom: 16px;
+    align-items: center;
+
 
 }
 
+.subtitulo {
+
+    margin-left: -30px;
+    text-align: left;
+    margin-top: -20px;
+    font-size: 16px;
+
+
+}
+
+
+
 .logo-image {
+    align-items: center;
 
     background-image: url("/imgs/Rectangle\ 1.png");
     background-size: cover;
     background-position: 0px -100px;
 
-    width: 50vw; /* 50% da largura do monitor */
-    height: 100vh; /* 100% do altura da tela */
-    
+    width: 50vw;
+    /* 50% da largura do monitor */
+    height: 100vh;
+    /* 100% do altura da tela */
+
 }
 
 .page-container {
 
-    display: flex; /* um ao lado do outro */
+
+    display: flex;
+    /* um ao lado do outro */
+    align-items: center;
+    justify-content: center;
 
 }
 
 .login-tela {
 
-    width: 50vw; /* 50% da largura do monitor */
-    height: 100vh; /* 100% do altura da tela */
 
+    width: 50vw;
+    /* 50% da largura do monitor */
+    height: 100vh;
+    /* 100% do altura da tela */
     /* Kit sobrevivência da centralização */
-    display: flex; /* Ativar o flex */
-    flex-direction: column; /* Muda o flex para colunas */
-    align-items: center; /* Centralizar horizontalmente */
-    justify-content: center; /* Centralizar verticalmente */
+    display: flex;
+    /* Ativar o flex */
+    flex-direction: column;
+    /* Muda o flex para colunas */
+    align-items: center;
+    /* Centralizar horizontalmente */
+    justify-content: center;
+    /* Centralizar verticalmente */
+
 
 }
 
-.classe { /* Com ponto antes */
+.classe {
+    /* Com ponto antes */
 
 }
 
-#id { /* Com hashtag antes */
+#id {
+    /* Com hashtag antes */
 
 }
 
-img { /* Tags, sem nenhum prefixo */
+img {
+    /* Tags, sem nenhum prefixo */
 
 }
 
@@ -58,25 +89,35 @@ img { /* Tags, sem nenhum prefixo */
 
 .inpt {
 
-    padding: 18px; /* Margem interna */
-    background-color: #F7F9FB; /* Define a cor de fundo */
-    width: 377px; /* Define a largura */
-    border: 1px solid #ccc; /* Define a borda */
-    border-radius: 10px; /* Define o arredondamento da borda */
-    margin-bottom: 16px; /* Define a distância de um botão para o outro */ 
+    padding: 18px;
+    /* Margem interna */
+    background-color: #F7F9FB;
+    /* Define a cor de fundo */
+    width: 377px;
+    /* Define a largura */
+    border: 1px solid #ccc;
+    /* Define a borda */
+    border-radius: 10px;
+    /* Define o arredondamento da borda */
+    margin-bottom: 16px;
+    /* Define a distância de um botão para o outro */
 }
 
 .btn {
 
     cursor: pointer;
     padding: 18px;
-    background-color: black;
-    color: white; /* Cor da fonte */
-    border: none; /*altura*/
-    width: 377px; /*largura*/
-    border-radius: 10px; /* Arredonda as bordas */
-    
-    
+    background-color: blue;
+    color: white;
+    /* Cor da fonte */
+    border: none;
+    /*altura*/
+    width: 377px;
+    /*largura*/
+    border-radius: 10px;
+    /* Arredonda as bordas */
+
+
 }
 
 .error-message {
@@ -100,5 +141,17 @@ img { /* Tags, sem nenhum prefixo */
     margin-top: 12px;
     color: red;
     font-size: 12px;
+
+}
+
+.imgss {
+
+    
+    margin-left: -30px;
+    text-align: left;
+    margin-bottom: -20px;
+    
+
+
 
 }
