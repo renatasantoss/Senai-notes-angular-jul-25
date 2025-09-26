@@ -1,0 +1,45 @@
+.page-container{
+    display: flex;
+}
+.logo{
+    
+    background-size: cover;
+    background-position: 0px -100px;
+    width: 50vw; /*50 % do tamanho horizontal do monitor*/
+    height: 100vh; /*50% do tamanho vertical do monitor*/
+}
+
+.login-container {
+    width: 50vw; /*50 % do tamanho horizontal do monitor*/
+    height: 100vh; /*50% do tamanho vertical do monitor*/
+    display: flex; /*Flexbox para alinhar os itens*/
+    flex-direction: column; /*Coluna para alinhar os itens verticalmente*/
+    align-items: center; /*Alinha os itens no centro horizontalmente*/
+    justify-content: center; /*Alinha os itens no centro verticalmente*/
+  }
+
+  .inpt {
+  
+    padding: 18px;
+    background-color: rgba(128, 128, 128, 0.014);
+    width: 377px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    
+    
+    
+}
+
+.titulo {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  .text {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 16px;
+
+  }
