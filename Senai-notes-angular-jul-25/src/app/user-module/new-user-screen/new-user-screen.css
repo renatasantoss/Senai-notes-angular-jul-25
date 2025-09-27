@@ -20,14 +20,15 @@
     padding-right: 48px;
     padding-top: 40px;
     padding-bottom: 40px;
-    border-radius: 1px;
+    border-radius: 5px;
   }
 
   .inpt {
   
     padding: 18px;
+    height: 50px;
     background-color: rgba(128, 128, 128, 0.014);
-    width: 400px;
+    width: 425px;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-bottom: 16px;
@@ -40,7 +41,7 @@
 .titulo {
     font-size: 24px;
     font-weight: 400;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     font-weight: bold;
   }
 
@@ -53,7 +54,10 @@
 
   .texts{
     margin-top: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 30px;
+    font-size: 13px;
+    color: #525866;
+    
   }
 
   .text2{
@@ -61,29 +65,64 @@
    text-align: left;
    margin: 6px;
    font-size: 14px;
+   font-weight: 500;
   }
 
   .btn{
     background-color: #335CFF;
-    width: 400px;
-    height: 44px;
+    width: 425px;
+    height: 42px;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-bottom: 16px;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 16px;
     
   }
 
   .img{
-    width: 200px;
+    width: 185px;
     height: 35px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
   .link{
     margin-top: 32px;
-    margin-bottom: ;
+    text-decoration: none;
+    color: #525866;
+    font-size: 14px;
+    
     
   }
+
+  .text3{
+    font-size: 12px;
+    color: #525866;
+  }
+
+  .input-icon-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .input-icon-container input {
+    width: 100%;
+    padding-right: 35px;
+    height: px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .input-icon-container i {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+  }
+  
+  
+
+  
