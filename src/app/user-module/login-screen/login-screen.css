@@ -6,15 +6,18 @@
     font-size: 65px;
     margin-bottom: 10px;
     align-items: center;
-   
+
 
 }
- .subtitulo {
 
-margin-bottom: 10px;
+.subtitulo {
+
+    margin-bottom: 10px;
+    font-size: 20px;
+    opacity: 0.5;
 
 
- }
+}
 
 .logo-image {
     align-items: center;
@@ -128,5 +131,38 @@ margin-bottom: 10px;
 .link {
 
     margin-top: 35px;
-    
+
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between; /* Password à esquerda, Forgot à direita */
+  align-items: center;
+  margin-bottom: 6px; /* espaço entre essa linha e o input */
+}
+
+.label-row p {
+  margin: 0; /* remove margens padrão */
+}
+
+.txt {
+  opacity: 0.5;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+
+
+.input-container i {
+  position: absolute;
+  right: 12px;
+  top: 40%;
+  transform: translateY(-50%);
+  color: #aaa;
+  cursor: pointer;
 }
