@@ -20,4 +20,11 @@ export const routes: Routes = [
 
 },
 
+ {
+
+   path: "",
+   loadComponent: () => LoginScreen
+
+},
+
 ];
