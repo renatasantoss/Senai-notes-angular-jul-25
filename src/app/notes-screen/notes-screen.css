@@ -13,7 +13,7 @@
   align-items: center;
   background: #fff;
   border-bottom: 1px solid #e5e7eb;
-  padding: 10px 20px;
+  padding: 20px 40px;
 }
 
 .top-bar .logo {
@@ -76,9 +76,8 @@
 .note-item {
   display: flex;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 15px;
   cursor: pointer;
-  transition: background 0.2s;
   margin-bottom: 10px;
 }
 
@@ -90,29 +89,110 @@
   background: #e0f2fe;
 }
 
-.thumb {
-  width: 50px;
-  height: 50px;
+.thumb1 {
+  width: 80px;
+  height: 80px;
   background: #cbd5e1;
   border-radius: 4px;
   margin-right: 10px;
   background-image: url(../../../public/imgs/Rectangle\ 45.png);
+  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center; /* Centraliza a imagem */
+
+}
+
+.thumb2 {
+
+  width: 60px;
+  height: 80px;
+  background: #cbd5e1;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-image: url(../../../public/imgs/Rectangle\ 46\ .png);
+  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center; /* Centraliza a imagem */
+
+}
+
+.thumb3 {
+
+  width: 60px;
+  height: 80px;
+  background: #cbd5e1;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-image: url(../../../public/imgs/Rectangle\ 47.png);
+  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center; /* Centraliza a imagem */
+
+}
+
+.thumb4 {
+
+  width: 60px;
+  height: 80px;
+  background: #cbd5e1;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-image: url(../../../public/imgs/Rectangle\ 48.png);
+  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center; /* Centraliza a imagem */
+}
+
+.thumb5 {
+
+  width: 60px;
+  height: 80px;
+  background: #cbd5e1;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-image: url(../../../public/imgs/Rectangle\ 49.png);  
+  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center; /* Centraliza a imagem */
+}
+
+.thumb6 {
+  
+  width: 60px;
+  height: 80px;
+  background: #cbd5e1;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-image: url(../../../public/imgs/Rectangle\ 50\ \(1\).png) 
+  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center; /* Centraliza a imagem */
+}
+
+.thumb7 {
+
+  width: 60px;
+  height: 80px;
+  background: #cbd5e1;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-image: url(../../../public/imgs/Rectangle\ 52.png);
+  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center; /* Centraliza a imagem */
 }
 
 .meta .note-title {
   font-weight: bold;
+  margin-bottom: 6px;
 }
 
 .note-tags {
   font-size: 0.8rem;
   color: #475569;
+  padding: 2px 6px;
+  height: 25px;
+  margin-top: 6px;
 }
 
 .note-tags .tag {
   background: #e2e8f0;
   border-radius: 4px;
   padding: 2px 6px;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 .note-date {
