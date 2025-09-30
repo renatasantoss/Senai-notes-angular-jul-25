@@ -1,5 +1,5 @@
 <main class="page-container">
-  <div class="login-tela">
+  <div class="login-tela" [formGroup]="loginForm">
 
     <img class="imgss" src="imgs/logo.svg" alt="Logo do Note.">
 
@@ -8,8 +8,10 @@
 
     <div>
       <p class="text">Address</p>
-      <input class="inpt" type="email" placeholder="Insira o e-mail">
+      <input class="inpt" type="email" placeholder="Insira o e-mail" formControlName="email">
+      <span class="error-message">{{emailErrorMessage}}</span>
     </div>
+
 
     <div class="text">
       <div class="label-row">
@@ -19,12 +21,17 @@
 
       <!-- container do input + ícone -->
       <div class="input-container">
-        <input class="inpt" type="password" placeholder="Insira a senha">
+        <input class="inpt" type="password" placeholder="Insira a senha" formControlName="password">
+        <span class="error-message">{{passwordErrorMessage}}</span>
+
         <i class="fa-regular fa-eye"></i>
       </div>
     </div>
 
-    <button class="btn">Login</button>
+    <button class="btn" (click)="onLoginClick()">Login</button>
+    <span class="success-status-message">{{ successStatusMessage }}</span>
+            <span class="error-status-message">{{ errorStatusMessage }}</span>
     <a class="link" href="#">No account yet? Sign Up</a>
+    
   </div>
 </main>
