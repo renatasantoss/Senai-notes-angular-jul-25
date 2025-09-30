@@ -158,7 +158,7 @@
   background: #cbd5e1;
   border-radius: 4px;
   margin-right: 10px;
-  background-image: url(../../../public/imgs/Rectangle\ 50\ \(1\).png) 
+  background-image: url(../../../public/imgs/Rectangle\ 50\ \(1\).png); 
   background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
   background-position: center; /* Centraliza a imagem */
 }
