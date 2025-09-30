@@ -1,6 +1,6 @@
 <main class="page-container">
 
-    <div class="login-container">
+    <div class="login-container" [formGroup]="loginForm">
   
       <img class="img" src="/imgs/logo (1).png" alt="logo-Notes">
   
@@ -24,7 +24,7 @@
   
       </div>
   
-      <button class="btn">Sign up</button>
+      <button class="btn" (click)="onEnterClick()">Sign up</button>
   
       <a class="link" href="#">Already have an account? Login</a>
   
