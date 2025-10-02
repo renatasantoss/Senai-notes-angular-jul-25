@@ -15,8 +15,7 @@
   <aside class="sidebar">
     <button class="btn-create">+ Create New Note</button>
 
-    <div class="notes-list">
-      <div class="note-item active">
+      <div class="note-item note-active">
         <div class="thumb1"></div>
         <div class="meta">
           <div class="note-title">React Performance Optimization</div>
@@ -51,7 +50,7 @@
           <div class="note-date">22 Set 2025</div>
         </div>
       </div>
-    </div>
+
 
       <div class="note-item">
         <div class="thumb4"></div>
@@ -107,7 +106,7 @@
 
   <main class="content">
     <div class="note-view">
-    <img src="imgs/Rectangle 44.png" alt="img-notes">
+    <img src="imgs/Rectangle 44.png" class="noteimg" alt="img-notes">
       <div class="cover">
         <div class="cover-image">
           <svg viewBox="0 0 800 150" preserveAspectRatio="none" class="svg-cover">
@@ -121,19 +120,23 @@
           <div class="tags">
             <span class="tag">Dev</span>
             <span class="tag">React</span>
+            <span class="last-edited">Last edited 25 Set 2025</span>
           </div>
-          <div class="last-edited">Last edited 25 Set 2025</div>
+
         </div>
       </div>
+        <form class="editor">
+          <textarea rows="12" class="text-editor" placeholder="Escreva sua nota..."></textarea>
 
-      <form class="editor">
+               </form>
 
-        <textarea rows="12" class="text-editor" placeholder="Escreva sua nota..."></textarea>
         <div class="editor-footer">
           <button type="button" class="btn-primary">Save Note</button>
           <button type="button" class="btn-ghost">Cancel</button>
+
         </div>
-      </form>
+
     </div>
   </main>
+    <div class="right-bar"></div>
 </div>
