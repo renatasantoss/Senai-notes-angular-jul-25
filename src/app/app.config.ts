@@ -1,7 +1,8 @@
-import { inject} from '@angular/core';
-import { Router } from '@angular/router';
+import { ApplicationConfig, inject, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
+import { provideRouter, Router } from '@angular/router';
 
-import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
+import { routes } from './app.routes';
+import { HttpErrorResponse, HttpInterceptorFn, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
@@ -27,3 +28,15 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
 
 
 }
+
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideHttpClient(
+      withInterceptors([ authInterceptor])
+    ),
+    provideBrowserGlobalErrorListeners(),
+    provideZonelessChangeDetection(),
+    provideRouter(routes)
+  ]
+};
