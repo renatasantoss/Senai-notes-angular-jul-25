@@ -9,6 +9,8 @@
       <p class="texts">Sign up to start organizing your notes and boost your productivity.</p>
   
       <div class="inpt-container">
+        <p class="text2">Name</p>
+        <input class="inpt" formControlName="name" type="text" placeholder="name" >
         
         <p class="text2">Email Address</p>
         <input class="inpt" formControlName="email" type="text" placeholder="email@example.com">
@@ -20,13 +22,17 @@
           <i class="fa-regular fa-eye"></i>
         </div>
   
-        <p class="text3">At least 8 characters</p>
+        <span class="error-message">{{emailErrorMessage}}</span>
+      <span class="error-message">{{passwordErrorMessage}}</span>
+  
   
       </div>
   
       <button class="btn" (click)="onEnterClick()">Sign up</button>
   
       <a class="link" href="#">Already have an account? Login</a>
+
+     
   
     </div>
   

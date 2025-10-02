@@ -14,8 +14,8 @@
     align-items: center; /*Alinha os itens no centro horizontalmente*/
     justify-content: center; /*Alinha os itens no centro verticalmente*/
     background-color: white;
-    width: 600px;
-    height: 600px;
+    width: 750px;
+    height: 700px;
     padding-left: 48px;
     padding-right: 48px;
     padding-top: 40px;
@@ -28,7 +28,7 @@
     padding: 18px;
     height: 50px;
     background-color: rgba(128, 128, 128, 0.014);
-    width: 425px;
+    width: 450px;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-bottom: 16px;
@@ -36,10 +36,11 @@
     
     
     
+    
 }
 
 .titulo {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
     margin-bottom: 8px;
     font-weight: bold;
@@ -70,7 +71,7 @@
 
   .btn{
     background-color: #335CFF;
-    width: 425px;
+    width: 450px;
     height: 42px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -78,12 +79,13 @@
     color: white;
     font-size: 16px;
     margin-top: 16px;
+    cursor: pointer;
     
   }
 
   .img{
-    width: 185px;
-    height: 35px;
+    width: 190px;
+    height: 45px;
     margin-bottom: 24px;
   }
 
@@ -122,6 +124,14 @@
     color: #aaa;
     pointer-events: none;
   }
+
+  .error-message {
+  
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+    
+}
   
   
 

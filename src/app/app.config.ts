@@ -1,12 +1,29 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { inject} from '@angular/core';
+import { Router } from '@angular/router';
 
-import { routes } from './app.routes';
+import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
+import { catchError, throwError } from 'rxjs';
 
-export const appConfig: ApplicationConfig = {
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection(),
-    provideRouter(routes)
-  ]
-};
+export const authInterceptor: HttpInterceptorFn = (req, next) => {
+
+  const router = inject(Router);
+
+  return next(req).pipe(
+
+    catchError((err: HttpErrorResponse) => {
+
+      if (err.status == 401) {
+
+        localStorage.clear();
+        router.navigate(['/login']);
+        
+      }
+
+      return throwError(() => err);
+      
+    })
+
+  );
+
+
+}
