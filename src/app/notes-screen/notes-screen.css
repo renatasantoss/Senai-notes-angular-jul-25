@@ -23,6 +23,25 @@
   position: relative;
 }
 
+input[type="submit"] {
+  background-color: #ffffff; /* Cor de fundo */
+  color: rgb(0, 0, 0); /* Cor do texto */
+  padding: 10px 20px; /* Preenchimento */
+  border: none; /* Remover borda padrão */
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer; /* Mudar cursor para mãozinha */
+  font-weight: bold ;
+    }
+
+.etiquetas {
+align: right;
+float: right;
+padding: 5px 10px; /* deixa o select mais confortável */
+position: relative;
+top: -10px;
+margin: 25px;
+border: none;
+}
 
 .top-bar .logo {
   font-size: 1.2rem;
@@ -85,6 +104,17 @@
   cursor: pointer;
   font-weight: 600;
   margin-bottom: 20px;
+}
+
+.btn-delete {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 6px;
+  padding: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border: 1px solid #b6b5b5;
 }
 
 .notes-list {
@@ -338,3 +368,24 @@ margin: 0 auto;
 
   
 }
+
+  .input-icon-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .input-icon-container input {
+    width: 100%;
+    padding-left: 35px;
+    height: px;
+    box-sizing: border-box;
+  }
+
+  .input-icon-container i {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+  }
