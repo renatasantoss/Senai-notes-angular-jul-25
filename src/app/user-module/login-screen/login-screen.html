@@ -9,7 +9,7 @@
     <div>
       <p class="text">Address</p>
       <input class="inpt" type="email" placeholder="Insira o e-mail" formControlName="email">
-      <span class="error-message">{{emailErrorMessage}}</span>
+      
     </div>
 
 
@@ -22,7 +22,11 @@
       <!-- container do input + ícone -->
       <div class="input-container">
         <input class="inpt" type="password" placeholder="Insira a senha" formControlName="password">
-        <span class="error-message">{{passwordErrorMessage}}</span>
+
+        <div class="error">
+          <span class="error-message">{{emailErrorMessage}}</span>
+          <span class="error-message">{{passwordErrorMessage}}</span>
+        </div>
 
         <i class="fa-regular fa-eye"></i>
       </div>
@@ -31,7 +35,10 @@
     <button class="btn" (click)="onLoginClick()">Login</button>
     <span class="success-status-message">{{ successStatusMessage }}</span>
     <span class="error-status-message">{{ errorStatusMessage }}</span>
-    <a class="link" href="#">No account yet? Sign Up</a>
+
+    <div class="div-linha">
+      <a class="link" href="/new-user">No account yet? Sign Up</a>
+    </div>
 
   </div>
 </main>

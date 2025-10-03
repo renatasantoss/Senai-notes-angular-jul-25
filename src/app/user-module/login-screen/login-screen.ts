@@ -91,7 +91,7 @@ export class LoginScreen {
       localStorage.setItem("meuToken", meuToken);
       localStorage.setItem("meuId", userId);
 
-      window.location.href = "chat";
+      window.location.href = "notes-screen";
 
     } else {
 
@@ -102,6 +102,8 @@ export class LoginScreen {
     this.cd.detectChanges(); // Forçar uma atualização da tela.
 
   }
+  
+  
 
 }
 
