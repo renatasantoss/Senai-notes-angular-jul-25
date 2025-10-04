@@ -16,12 +16,13 @@
 <div class="notes-app">
   <!-- Conteúdo principal -->
   <aside class="sidebar">
-    <button class="btn-create">+ Criar nova nota</button>
+    <button class="btn-create" (click)="onNoteCreate()">+ Criar nova nota</button>
 
-    <div class="note-item note-active">
+    @for (nota of notes; track $index) {
+    <div (click)="onNoteClick(nota)" class="note-item note-active">
       <div class="thumb1"></div>
       <div class="meta">
-        <div class="note-title">React Performance Optimization</div>
+        <div class="note-title">{{nota.titulo}}</div>
         <div class="note-tags">
           <span class="tag">Dev</span>
           <span class="tag">React</span>
@@ -29,7 +30,9 @@
         <div class="note-date">25 Set 2025</div>
       </div>
     </div>
+    }
 
+<!-- 
     <div class="note-item">
       <div class="thumb2"></div>
       <div class="meta">
@@ -103,12 +106,12 @@
         </div>
         <div class="note-date">22 Set 2025</div>
       </div>
-    </div>
+    </div> -->
 
   </aside>
 
   <main class="content">
-    <div class="note-view">
+    <div *ngIf="selectedNote" class="note-view">
       <img src="imgs/Rectangle 44.png" class="noteimg" alt="img-notes">
       <div class="cover">
         <div class="cover-image">
@@ -118,14 +121,16 @@
       </div>
 
       <div class="note-head">
-        <input type="submit" value="React Performance Optimization" class="note-title-display">
+        <input [formControl]="tituloNota" class="note-title-display">
 
           <select id="etiqueta" class="etiquetas">
+          <!-- <select [(ngModel)]="selectedNote.tags" id="etiqueta" class="etiquetas"> -->
             <option selected disabled>Selecione uma etiqueta</option>
-            <option value="dev">dev</option>
-            <option value="cooking">cooking</option>
-            <option value="work">work</option>
-            <option value="home">home</option>
+            <option value="dev">Dev</option>
+            <option value="cooking">Cooking</option>
+            <option value="work">Work</option>
+            <option value="home">Home</option>
+            <option value="home">Travel</option>
           </select>
 
           <div class="note-meta-row">
@@ -138,13 +143,13 @@
           </div>
       </div>
       <form class="editor">
-        <textarea rows="12" class="text-editor" placeholder="Escreva sua nota..."></textarea>
+        <textarea [formControl]="descricaoNota" rows="12" class="text-editor" placeholder="Escreva sua nota..."></textarea>
 
       </form>
 
       <div class="editor-footer">
-        <button type="button" class="btn-primary">Salvar</button>
-        <button type="button" class="btn-ghost">Cancelar</button>
+        <button type="button" class="btn-primary" (click)="onNoteSave()">Salvar</button>
+        <button type="button" class="btn-ghost" (click)="selectedNote = null">Cancelar</button>
 
       </div>
 

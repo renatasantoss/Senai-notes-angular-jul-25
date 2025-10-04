@@ -104,6 +104,8 @@ border: none;
   cursor: pointer;
   font-weight: 600;
   margin-bottom: 20px;
+  animation-name: show-up;
+  animation-duration: .5s;
 }
 
 .btn-delete {
@@ -263,8 +265,13 @@ border: none;
 }
 
 .note-title-display {
-  font-size: 1.8rem;
   margin-bottom: 10px;
+  border: none;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 
 .note-meta-row {
