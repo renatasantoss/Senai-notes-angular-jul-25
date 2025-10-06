@@ -145,8 +145,8 @@
 @media screen and (max-width: 768px){
 
   .login-container{
-    width: 80vw;
-    height: 80vh;
+    width: 100vw;
+    height: 100vh;
     
 
   }
@@ -176,6 +176,20 @@
 .btn{
   width: 70vw;
   margin-left: 10px;
+}
+
+.texts{
+  font-size: 11px;
+  text-align: center;
+}
+
+.titulo{
+  font-size: 27px;
+}
+
+.input-icon-container i{
+  transform: translateY(-1%);
+
 }
 
   }
