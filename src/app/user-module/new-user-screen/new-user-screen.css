@@ -140,6 +140,45 @@
   width: 65%;
   text-align: center;
 }
+
+
+@media screen and (max-width: 768px){
+
+  .login-container{
+    width: 80vw;
+    height: 80vh;
+    
+
+  }
+
+  .inpt-container{
+    width: 100vw;
+    padding-left: 70px;
+    
+  }
+
+.page-container {
+    width: 100vw;
+    
+
+}
+
+.inpt{
+    width: 70vw;
+
+}
+.input-icon-container{
+  width: 70vw;
   
 
+}
+
+.btn{
+  width: 70vw;
+  margin-left: 10px;
+}
+
+  }
+    
+    
   
