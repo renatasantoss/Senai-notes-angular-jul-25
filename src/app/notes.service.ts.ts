@@ -27,4 +27,8 @@ export class NotesServiceTs {
     return this.http.post<any>(this.apiUrl, note);
 
 }
+
+  deleteNote(id: number): Observable<any> {
+  return this.http.delete(`http://localhost:3000/notas`);
+}
 }

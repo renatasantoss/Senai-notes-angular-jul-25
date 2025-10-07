@@ -123,7 +123,7 @@
       <div class="note-head">
         <input [formControl]="tituloNota" class="note-title-display">
 
-          <select id="etiqueta" class="etiquetas">
+          <select [(ngModel)]="tagSelecionada" id="etiqueta" class="etiquetas">
           <!-- <select [(ngModel)]="selectedNote.tags" id="etiqueta" class="etiquetas"> -->
             <option selected disabled>Selecione uma etiqueta</option>
             <option value="dev">Dev</option>
@@ -156,6 +156,6 @@
     </div>
   </main>
   <div class="right-bar">
-  <button class="btn-delete">+ Excluir nota</button>
+  <button (click)="onNoteDelete()" class="btn-delete">+ Excluir nota</button>
   </div>
 </div>

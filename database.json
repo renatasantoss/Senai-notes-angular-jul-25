@@ -6,18 +6,18 @@
       "imagemUrl": "Link da imagem",
       "usuarioId": 1,
       "tags": [
-        "Tag 1"
+        "dev"
       ],
       "id": "e8d3"
     },
     {
       "id": "648e",
-      "titulo": "Novo Titulo",
-      "descricao": "Descrição da nova nota",
+      "titulo": "Aula Java ",
+      "descricao": "Aula Java part 1",
       "imagemUrl": "link da imagem",
       "usuarioId": 1,
       "tags": [
-        "Tag 1"
+        "work"
       ],
       "dataCriacao": "2025-10-03T23:43:22.270Z",
       "dataAtualizacao": "2025-10-03T23:43:22.270Z"
@@ -28,9 +28,7 @@
       "descricao": "Descrição da nova nota",
       "imagemUrl": "link da imagem",
       "usuarioId": 1,
-      "tags": [
-        "Tag 1"
-      ],
+      "tags": [],
       "dataCriacao": "2025-10-03T23:43:51.742Z",
       "dataAtualizacao": "2025-10-03T23:43:51.742Z"
     },
@@ -40,9 +38,7 @@
       "descricao": "Descrição da nova nota",
       "imagemUrl": "link da imagem",
       "usuarioId": 1,
-      "tags": [
-        "Tag 1"
-      ],
+      "tags": [],
       "dataCriacao": "2025-10-03T23:43:52.474Z",
       "dataAtualizacao": "2025-10-03T23:43:52.474Z"
     },

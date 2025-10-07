@@ -26,9 +26,7 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
 
   );
 
-
 }
-
 
 export const appConfig: ApplicationConfig = {
   providers: [
