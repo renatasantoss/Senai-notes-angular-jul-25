@@ -148,12 +148,13 @@
     width: 100vw;
     height: 100vh;
     
+    
 
   }
 
   .inpt-container{
     width: 100vw;
-    padding-left: 70px;
+    padding-left: 45px;
     
   }
 
@@ -164,18 +165,18 @@
 }
 
 .inpt{
-    width: 70vw;
+    width: 80vw;
 
 }
 .input-icon-container{
-  width: 70vw;
+   width: 80vw;
   
 
 }
 
 .btn{
-  width: 70vw;
-  margin-left: 10px;
+  margin-left: 0px;
+  width: 80vw;
 }
 
 .texts{
@@ -188,8 +189,12 @@
 }
 
 .input-icon-container i{
-  transform: translateY(-1%);
+  transform: translateY(-0%);
 
+}
+
+.div-linha{
+  width: 90%;
 }
 
   }

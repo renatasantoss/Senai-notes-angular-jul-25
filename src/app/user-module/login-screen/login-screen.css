@@ -191,6 +191,7 @@
   
   .text{
     font-size: 14px;
+    margin-bottom: 10px;
   }
   
   @media screen and (max-width: 768px){
@@ -202,10 +203,14 @@
 
   .input-container{
     width: 100vw;
+
+    
   }
 
  .inpt-resp {
-    width: 60vw;
+    width: 80vw;
+    
+    
 }
 
 .page-container {
@@ -213,12 +218,13 @@
 }
 
 .inpt{
-    width: 60vw;
+    width: 80vw;
+    
 
 }
 
 .btn{
-    width: 60vw;
+    width: 80vw;
 }
 
   }
