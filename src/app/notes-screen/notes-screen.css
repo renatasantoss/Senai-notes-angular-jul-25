@@ -451,3 +451,146 @@ input[type="submit"] {
   color: #aaa;
   pointer-events: none;
 }
+
+@media (max-width: 768px) {
+  /* Layout principal em coluna */
+  .notes-app {
+    flex-direction: column;
+  }
+
+  /* Barra lateral vai para o topo */
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 10px;
+  }
+
+  .btn-create {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  /* Conteúdo principal ocupa toda a largura */
+  .content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .note-head {
+    padding: 0 10px;
+  }
+
+  .note-title-display {
+    font-size: 20px;
+  }
+
+  .editor {
+    padding: 0 10px;
+  }
+
+  .text-editor {
+    margin-top: 30px;
+    min-height: 150px;
+  }
+
+  .editor-footer {
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Right-bar (lixeira) vai para baixo */
+  .right-bar {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #e5e7eb;
+    padding: 10px;
+  }
+
+  .btn-delete {
+    width: 100%;
+  }
+
+  /* Imagem de capa responsiva */
+  .image {
+    height: 200px;
+  }
+
+  /* Barra superior */
+  .top-bar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .search-area {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-area input {
+    width: 100%;
+    padding: 10px 30px;
+  }
+
+  /* Ícone dentro do input */
+  .input-icon-container {
+    width: 100%;
+  }
+
+  .input-icon-container i {
+    right: 15px;
+  }
+
+  /* Lista de notas */
+  .note-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+  }
+
+  .note-title {
+    font-size: 1rem;
+  }
+
+  .meta {
+    flex: 1;
+  }
+
+  .thumb1, .thumb2, .thumb3, .thumb4, .thumb5, .thumb6, .thumb7 {
+    width: 40px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .note-tags {
+    flex-wrap: wrap;
+  }
+
+  .etiquetas {
+    float: none;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .note-meta-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .tags .tag {
+    font-size: 0.8rem;
+  }
+}
+
+

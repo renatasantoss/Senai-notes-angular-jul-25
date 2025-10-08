@@ -42,7 +42,7 @@ export class LoginScreen {
 
     let darkModeLocalStorage = localStorage.getItem("darkMode");
 
-    if (darkModeLocalStorage = "true"){
+    if (darkModeLocalStorage == "true"){
       this.darkMode = true;
       document.body.classList.toggle("dark-mode", this.darkMode);
     }
