@@ -39,7 +39,8 @@
     align-items: center;
     justify-content: center;
     background-color: #F3F5F8;
-    height: 100vh;
+    width: 100vw; 
+    height: 95vh; 
 
 }
 
@@ -185,7 +186,7 @@
     border-top: 2px solid #E0E4EA;
     margin-top: 20px;
     padding-top: 25px;
-    width: 70%;
+    width: 60%;
     text-align: center;
   }
   
@@ -193,6 +194,23 @@
     font-size: 14px;
     margin-bottom: 10px;
   }
+
+  header{
+    width: 100vw;
+    height: 5vh;
+    background-color: #F3F5F8;
+    display: flex;
+    justify-content: end;
+  
+  }
+  
+  .btn2 {
+    border: none;
+    padding-right: 30px;
+    background-color: #F3F5F8;
+  }
+  
+  
   
   @media screen and (max-width: 768px){
 
@@ -228,6 +246,78 @@
 }
 
   }
+
+  ::ng-deep body.dark-mode .login-tela{
+
+    background-color: black !important;
+  }
+
+  ::ng-deep body.dark-mode .titulo {
+
+    color: white;
+  }
+
+  
+  ::ng-deep body.dark-mode .subtitulo {
+  
+    color: white;
+  
+
+  }
+
+  ::ng-deep body.dark-mode .txt {
+
+    color: white;
+    opacity: 100;
     
+
+  }
+
+  ::ng-deep body.dark-mode .text {
+
+    color: white;
     
+
+    
+
+  } ::ng-deep body.dark-mode .link {  
+
+    color: white;
+    
+
+  }
+
+ ::ng-deep body.dark-mode .page-container {
+
+  background-color: #1b1b1b;
+    
+
+  }
+
+  ::ng-deep body.dark-mode header {
+
+    background-color: #1b1b1b;
+    color: white;
+    
+  
+  }
+  
+  ::ng-deep body.dark-mode .btn2 {
+  
+    background-color: #1b1b1b;
+    color: white;
+    border: none;
+    
+  
+  }
+
+  ::ng-deep body.dark-mode .imgss {
+  
+    height: 40px;
+    
+  
+  }
+  
+
+ 
   
