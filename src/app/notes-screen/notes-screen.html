@@ -4,12 +4,12 @@
     <img src="imgs/logo.png" alt="logo-notes">
   </div>
   <div class="search-area">
-  <div class="input-icon-container">
-  <input class="inpt" type="text" placeholder="Buscar notas..." >
-  <i class="fa-solid fa-magnifying-glass"></i>
-  </div>
+    <div class="input-icon-container">
+      <input class="inpt" type="text" placeholder="Buscar notas...">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
 
-  <button class="power-btn">⏻</button>
+    <button class="power-btn">⏻</button>
   </div>
 </header>
 
@@ -32,7 +32,7 @@
     </div>
     }
 
-<!-- 
+    <!-- 
     <div class="note-item">
       <div class="thumb2"></div>
       <div class="meta">
@@ -112,7 +112,9 @@
 
   <main class="content">
     <div *ngIf="selectedNote" class="note-view">
-      <img src="imgs/Rectangle 44.png" class="noteimg" alt="img-notes">
+      <img [src]="selectedNote.imagemUrl" class="noteimg"/>
+      <input type="file" accept="image/*" (change)="onImagemSelecionada($event)" class="upload-img" />
+
       <div class="cover">
         <div class="cover-image">
           <svg viewBox="0 0 800 150" preserveAspectRatio="none" class="svg-cover">
@@ -123,27 +125,28 @@
       <div class="note-head">
         <input [formControl]="tituloNota" class="note-title-display">
 
-          <select [(ngModel)]="tagSelecionada" id="etiqueta" class="etiquetas">
+        <select [(ngModel)]="tagSelecionada" id="etiqueta" class="etiquetas">
           <!-- <select [(ngModel)]="selectedNote.tags" id="etiqueta" class="etiquetas"> -->
-            <option selected disabled>Selecione uma etiqueta</option>
-            <option value="dev">Dev</option>
-            <option value="cooking">Cooking</option>
-            <option value="work">Work</option>
-            <option value="home">Home</option>
-            <option value="home">Travel</option>
-          </select>
+          <option selected disabled>Selecione uma etiqueta</option>
+          <option value="dev">Dev</option>
+          <option value="cooking">Cooking</option>
+          <option value="work">Work</option>
+          <option value="home">Home</option>
+          <option value="home">Travel</option>
+        </select>
 
-          <div class="note-meta-row">
-            <div class="tags">
-              <span class="tag">Dev</span>
-              <span class="tag">React</span>
-              <span class="last-edited">Last edited 25 Set 2025</span>
-            </div>
-
+        <div class="note-meta-row">
+          <div class="tags">
+            <span class="tag">Dev</span>
+            <span class="tag">React</span>
+            <span class="last-edited">Last edited 25 Set 2025</span>
           </div>
+
+        </div>
       </div>
       <form class="editor">
-        <textarea [formControl]="descricaoNota" rows="12" class="text-editor" placeholder="Escreva sua nota..."></textarea>
+        <textarea [formControl]="descricaoNota" rows="12" class="text-editor"
+          placeholder="Escreva sua nota..."></textarea>
 
       </form>
 
@@ -156,6 +159,6 @@
     </div>
   </main>
   <div class="right-bar">
-  <button (click)="onNoteDelete()" class="btn-delete">+ Excluir nota</button>
+    <button (click)="onNoteDelete()" class="btn-delete">+ Excluir nota</button>
   </div>
 </div>

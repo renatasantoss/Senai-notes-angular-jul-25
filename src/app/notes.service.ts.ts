@@ -29,6 +29,6 @@ export class NotesServiceTs {
 }
 
   deleteNote(id: number): Observable<any> {
-  return this.http.delete(`http://localhost:3000/notas`);
+  return this.http.delete(`http://localhost:3000/notas/`+ id);
 }
 }

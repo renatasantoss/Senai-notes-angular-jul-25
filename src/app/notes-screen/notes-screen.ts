@@ -47,8 +47,8 @@ export class NotesScreen implements OnInit {
   onNoteSave(): void {
     if (this.selectedNote) {
 
-      this.selectedNote.tags= [this.tagSelecionada]
-      this.selectedNote.titulo= this.tituloNota.value
+      this.selectedNote.tags = [this.tagSelecionada]
+      this.selectedNote.titulo = this.tituloNota.value
       this.selectedNote.descricao = this.descricaoNota.value
       this.notesService.saveNote(this.selectedNote).subscribe(() => {
         this.getNotes();  // Atualiza a lista de notas
@@ -62,13 +62,13 @@ export class NotesScreen implements OnInit {
     this.tituloNota.setValue(this.selectedNote.titulo);
     this.descricaoNota.setValue(this.selectedNote.descricao);
 
-    if (this.selectedNote.tags != null && this.selectedNote.tags.length > 0){
+    if (this.selectedNote.tags != null && this.selectedNote.tags.length > 0) {
 
-      this.tagSelecionada= this.selectedNote.tags[0]; 
+      this.tagSelecionada = this.selectedNote.tags[0];
 
-    } else{
+    } else {
 
-      this.tagSelecionada= "";
+      this.tagSelecionada = "";
 
     }
   }
@@ -94,7 +94,7 @@ export class NotesScreen implements OnInit {
 
   // Método para excluir uma nota
   onNoteDelete(): void {
-    if (this.selectedNote) {
+    if (!this.selectedNote) {
       alert('Selecione uma nota para excluir.');
       return;
     }
@@ -107,4 +107,19 @@ export class NotesScreen implements OnInit {
       });
     }
   }
+  
+  onImagemSelecionada(event: any) {
+  const arquivo = event.target.files[0];
+  if (arquivo) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      // Atualiza apenas a nota selecionada
+      this.selectedNote.imagemUrl = reader.result as string;
+      this.cd.detectChanges(); // atualiza a tela
+    };
+    reader.readAsDataURL(arquivo);
+  }
+}
+
+
 }

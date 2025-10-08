@@ -17,30 +17,38 @@
 }
 
 .content {
-  flex: 1; /* ocupa todo espaço disponível */
+  flex: 1;
+  /* ocupa todo espaço disponível */
   padding: -100px;
   overflow-y: auto;
   position: relative;
 }
 
 input[type="submit"] {
-  background-color: #ffffff; /* Cor de fundo */
-  color: rgb(0, 0, 0); /* Cor do texto */
-  padding: 10px 20px; /* Preenchimento */
-  border: none; /* Remover borda padrão */
-  border-radius: 5px; /* Cantos arredondados */
-  cursor: pointer; /* Mudar cursor para mãozinha */
-  font-weight: bold ;
-    }
+  background-color: #ffffff;
+  /* Cor de fundo */
+  color: rgb(0, 0, 0);
+  /* Cor do texto */
+  padding: 10px 20px;
+  /* Preenchimento */
+  border: none;
+  /* Remover borda padrão */
+  border-radius: 5px;
+  /* Cantos arredondados */
+  cursor: pointer;
+  /* Mudar cursor para mãozinha */
+  font-weight: bold;
+}
 
 .etiquetas {
-align: right;
-float: right;
-padding: 5px 10px; /* deixa o select mais confortável */
-position: relative;
-top: -10px;
-margin: 25px;
-border: none;
+  align: right;
+  float: right;
+  padding: 5px 10px;
+  /* deixa o select mais confortável */
+  position: relative;
+  top: -10px;
+  margin: 25px;
+  border: none;
 }
 
 .top-bar .logo {
@@ -73,7 +81,8 @@ border: none;
   display: flex;
   height: calc(100vh - 50px);
   background: #f9fafb;
-  position: relative; /* para a right-bar se posicionar direito */
+  position: relative;
+  /* para a right-bar se posicionar direito */
 }
 
 .right-bar {
@@ -147,8 +156,10 @@ border: none;
   border-radius: 4px;
   margin-right: 10px;
   background-image: url(../../../public/imgs/Rectangle\ 45.png);
-  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
-  background-position: center; /* Centraliza a imagem */
+  background-size: cover;
+  /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center;
+  /* Centraliza a imagem */
 
 }
 
@@ -160,8 +171,10 @@ border: none;
   border-radius: 4px;
   margin-right: 10px;
   background-image: url(../../../public/imgs/Rectangle\ 46\ .png);
-  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
-  background-position: center; /* Centraliza a imagem */
+  background-size: cover;
+  /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center;
+  /* Centraliza a imagem */
 
 }
 
@@ -173,8 +186,10 @@ border: none;
   border-radius: 4px;
   margin-right: 10px;
   background-image: url(../../../public/imgs/Rectangle\ 47.png);
-  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
-  background-position: center; /* Centraliza a imagem */
+  background-size: cover;
+  /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center;
+  /* Centraliza a imagem */
 
 }
 
@@ -186,8 +201,10 @@ border: none;
   border-radius: 4px;
   margin-right: 10px;
   background-image: url(../../../public/imgs/Rectangle\ 48.png);
-  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
-  background-position: center; /* Centraliza a imagem */
+  background-size: cover;
+  /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center;
+  /* Centraliza a imagem */
 }
 
 .thumb5 {
@@ -197,21 +214,25 @@ border: none;
   background: #cbd5e1;
   border-radius: 4px;
   margin-right: 10px;
-  background-image: url(../../../public/imgs/Rectangle\ 49.png);  
-  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
-  background-position: center; /* Centraliza a imagem */
+  background-image: url(../../../public/imgs/Rectangle\ 49.png);
+  background-size: cover;
+  /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center;
+  /* Centraliza a imagem */
 }
 
 .thumb6 {
-  
+
   width: 60px;
   height: 80px;
   background: #cbd5e1;
   border-radius: 4px;
   margin-right: 10px;
-  background-image: url(../../../public/imgs/Rectangle\ 50\ \(1\).png); 
-  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
-  background-position: center; /* Centraliza a imagem */
+  background-image: url(../../../public/imgs/Rectangle\ 50\ \(1\).png);
+  background-size: cover;
+  /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center;
+  /* Centraliza a imagem */
 }
 
 .thumb7 {
@@ -222,8 +243,10 @@ border: none;
   border-radius: 4px;
   margin-right: 10px;
   background-image: url(../../../public/imgs/Rectangle\ 52.png);
-  background-size: cover; /* Faz a imagem cobrir a área de forma proporcional */
-  background-position: center; /* Centraliza a imagem */
+  background-size: cover;
+  /* Faz a imagem cobrir a área de forma proporcional */
+  background-position: center;
+  /* Centraliza a imagem */
 }
 
 .meta .note-title {
@@ -346,17 +369,25 @@ border: none;
   position: relative;
   background-color: white;
   padding-right: 0px;
-  height: 100%; /* tenta ocupar toda altura possível */
+  height: 100%;
+  /* tenta ocupar toda altura possível */
   display: flex;
   flex-direction: column;
 }
 
 .noteimg {
+  width: 90%;
+  padding: 20px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+}
 
-width: 90%;
-padding: 20px;
-margin: 0 auto;
-
+.upload-img {
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
 }
 
 .note-view::after {
@@ -369,30 +400,25 @@ margin: 0 auto;
 
 }
 
-.class last-edited {
+.class last-edited {}
 
-
-
-  
+.input-icon-container {
+  position: relative;
+  width: 100%;
 }
 
-  .input-icon-container {
-    position: relative;
-    width: 100%;
-  }
+.input-icon-container input {
+  width: 100%;
+  padding-left: 35px;
+  height: px;
+  box-sizing: border-box;
+}
 
-  .input-icon-container input {
-    width: 100%;
-    padding-left: 35px;
-    height: px;
-    box-sizing: border-box;
-  }
-
-  .input-icon-container i {
-    position: absolute;
-    right: 10px;
-    top: 40%;
-    transform: translateY(-50%);
-    color: #aaa;
-    pointer-events: none;
-  }
+.input-icon-container i {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
