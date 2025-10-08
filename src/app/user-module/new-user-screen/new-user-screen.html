@@ -1,12 +1,15 @@
+<header><button class="btn2" (click)="ligarDesligarDarkMode()"><i class="fa-solid fa-moon"></i>
+  {{darkMode == true ? "Modo Claro" : "Modo Escuro"}}</button></header>
 <main class="page-container">
 
     <div class="login-container" [formGroup]="loginForm">
   
-      <img class="img" src="imgs/logo.svg"alt="logo-Notes">
+      <img class="img"[src]="darkMode == true? 'imgs/logodarkmode.png' : 'imgs/logo.svg'">
   
       <h1 class="titulo">Create Your Account</h1>
   
       <p class="texts">Sign up to start organizing your notes and boost your productivity.</p>
+      
   
       <div class="inpt-container">
         <p class="text2">Name</p>

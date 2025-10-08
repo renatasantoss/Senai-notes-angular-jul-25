@@ -1,7 +1,9 @@
+<header><button class="btn2" (click)="ligarDesligarDarkMode()"><i class="fa-solid fa-moon"></i>
+  {{darkMode == true ? "Modo Claro" : "Modo Escuro"}}</button></header>
 <main class="page-container">
   <div class="login-tela" [formGroup]="loginForm">
 
-    <img class="imgss" src="imgs/logo.svg" alt="Logo do Note.">
+    <img class="imgss"[src]="darkMode == true? 'imgs/logodarkmode.png' : 'imgs/logo.svg'">
 
     <h1 class="titulo">Welcome to Note</h1>
     <p class="subtitulo">Please log in to continue</p>

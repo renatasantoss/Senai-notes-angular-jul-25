@@ -15,6 +15,7 @@ export class NewUserScreen {
   nameErrorMessage: string;
   emailErrorMessage: string;
   passwordErrorMessage: string;
+  darkMode: boolean = false;
  
 
   constructor(private fb: FormBuilder) {
@@ -29,6 +30,16 @@ export class NewUserScreen {
     this.nameErrorMessage = "";
     this.emailErrorMessage = "";
     this.passwordErrorMessage = "";
+  }
+
+  ngOnInit() {
+
+    let darkModeLocalStorage = localStorage.getItem("darkMode");
+
+    if (darkModeLocalStorage == "true"){
+      this.darkMode = true;
+      document.body.classList.toggle("dark-mode", this.darkMode);
+    }
   }
 
   async onEnterClick() {
@@ -95,4 +106,19 @@ export class NewUserScreen {
       window.location.href = "login";
     
   }
-}}
+  
+}
+
+
+ligarDesligarDarkMode() {
+  
+  this.darkMode = !this.darkMode;
+  
+  document.body.classList.toggle("dark-mode", this.darkMode);
+
+  localStorage.setItem("darkMode", this.darkMode.toString())
+  
+
+}
+
+}

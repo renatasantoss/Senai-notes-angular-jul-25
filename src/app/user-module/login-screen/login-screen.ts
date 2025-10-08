@@ -17,6 +17,7 @@ export class LoginScreen {
   passwordErrorMessage: string;
   successStatusMessage: string;
   errorStatusMessage: string;
+  darkMode: boolean = false;
 
   constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) {
     // Quando a tela iniciar.
@@ -36,6 +37,17 @@ export class LoginScreen {
     this.errorStatusMessage = "";
 
   }
+
+  ngOnInit() {
+
+    let darkModeLocalStorage = localStorage.getItem("darkMode");
+
+    if (darkModeLocalStorage = "true"){
+      this.darkMode = true;
+      document.body.classList.toggle("dark-mode", this.darkMode);
+    }
+  }
+
 
   async onLoginClick() {
 
@@ -101,6 +113,17 @@ export class LoginScreen {
 
     this.cd.detectChanges(); // Forçar uma atualização da tela.
 
+  }
+
+  ligarDesligarDarkMode() {
+  
+    this.darkMode = !this.darkMode;
+    
+    document.body.classList.toggle("dark-mode", this.darkMode);
+
+    localStorage.setItem("darkMode", this.darkMode.toString())
+    
+  
   }
   
   
