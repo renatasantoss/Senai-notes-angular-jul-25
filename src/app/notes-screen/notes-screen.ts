@@ -26,6 +26,9 @@ export class NotesScreen implements OnInit {
   tagSelecionada: string = ''
   tituloNota = new FormControl("");
   descricaoNota = new FormControl("");
+  arquivoImagem: File | null = null;  // mantém o arquivo selecionado
+  urlImagem = '';                     // URL local para preview
+
 
   constructor(private notesService: NotesServiceTs, private cd: ChangeDetectorRef) { }
 
@@ -107,19 +110,50 @@ export class NotesScreen implements OnInit {
       });
     }
   }
-  
-  onImagemSelecionada(event: any) {
-  const arquivo = event.target.files[0];
-  if (arquivo) {
-    const reader = new FileReader();
-    reader.onload = () => {
-      // Atualiza apenas a nota selecionada
-      this.selectedNote.imagemUrl = reader.result as string;
-      this.cd.detectChanges(); // atualiza a tela
-    };
-    reader.readAsDataURL(arquivo);
-  }
-}
 
+  // onImagemSelecionada(event: any) {
+  //   const arquivo = event.target.files[0];
+  //   if (arquivo) {
+  //     const reader = new FileReader();
+  //     reader.onload = () => {
+  //       // Atualiza apenas a nota selecionada
+  //       this.selectedNote.imagemUrl = reader.result as string;
+  //       this.cd.detectChanges(); // atualiza a tela
+  //     };
+  //     reader.readAsDataURL(arquivo);
+  //   }
+  // }
+
+  definirImagem(evento: Event): void {
+    const input = evento.target as HTMLInputElement;
+    if (!input.files || input.files.length === 0) {
+      alert('Selecione uma imagem.');
+      return;
+    }
+
+    const file = input.files[0]; // o primeiro arquivo da lista
+
+    // Validações simples (opcional, mas recomendado)
+    const tiposPermitidos = ['image/jpeg', 'image/png', 'image/webp'];
+    const tamanhoMaxMB = 5;
+
+    if (!tiposPermitidos.includes(file.type)) {
+      alert('Tipo inválido. Use JPG, PNG ou WEBP.');
+      return;
+    }
+    if (file.size > tamanhoMaxMB * 1024 * 1024) {
+      alert(`Arquivo muito grande (máx. ${tamanhoMaxMB}MB).`);
+      return;
+    }
+
+    // Libera a URL anterior (evita vazamento de memória)
+    if (this.urlImagem) {
+      URL.revokeObjectURL(this.urlImagem);
+    }
+
+    // Guarda o arquivo e gera a URL local para preview imediato
+    this.arquivoImagem = file;
+    this.urlImagem = URL.createObjectURL(file);
+  }
 
 }

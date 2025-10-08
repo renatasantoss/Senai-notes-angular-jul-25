@@ -112,8 +112,11 @@
 
   <main class="content">
     <div *ngIf="selectedNote" class="note-view">
-      <img [src]="selectedNote.imagemUrl" class="noteimg"/>
-      <input type="file" accept="image/*" (change)="onImagemSelecionada($event)" class="upload-img" />
+      <label class="image" [style.background-image]="'url(' + (urlImagem || '') + ')'">
+        <input type="file" accept="image/*" (change)="definirImagem($event)" class="upload-img" />
+        <span class="image__hint" *ngIf="!(urlImagem)">Clique para escolher uma imagem</span>
+      </label>
+
 
       <div class="cover">
         <div class="cover-image">
