@@ -2,12 +2,12 @@
   "notas": [
     {
       "id": "648e",
-      "titulo": "Aula Java ",
-      "descricao": "Aula Java part 1",
+      "titulo": "teste",
+      "descricao": "Teste darkmode",
       "imagemUrl": "link da imagem",
       "usuarioId": 1,
       "tags": [
-        "work"
+        "home"
       ],
       "dataCriacao": "2025-10-03T23:43:22.270Z",
       "dataAtualizacao": "2025-10-03T23:43:22.270Z"

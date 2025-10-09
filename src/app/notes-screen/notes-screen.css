@@ -12,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
   background: #fff;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #d1d5db;
   padding: 20px 40px;
 }
 
@@ -20,7 +20,7 @@
   flex: 1;
   /* ocupa todo espaço disponível */
   padding: -100px;
-  overflow-y: auto;
+  overflow: auto;
   position: relative;
 }
 
@@ -88,7 +88,7 @@ input[type="submit"] {
 .right-bar {
   width: 360px;
   background: #fff;
-  border-left: 1px solid #e5e7eb;
+  border-left: 1px solid #d1d5db;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -98,7 +98,7 @@ input[type="submit"] {
 .sidebar {
   width: 360px;
   background: #fff;
-  border-right: 1px solid #e5e7eb;
+  border-right: 1px solid  #d1d5db;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -142,7 +142,7 @@ input[type="submit"] {
 }
 
 .note-item:hover {
-  background: #1b1b1b;;
+  background-color:#e0f2fe;
  
 }
 
@@ -315,13 +315,20 @@ input[type="submit"] {
 
 }
 
+.tag1{
+  background: #bae6fd;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
 .editor {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-left: 60px;
   padding-right: 60px;
-  border-top: 1px solid #cbd5e1;
+  border-top: 1px solid  #d1d5db;
 }
 
 .input-title {
@@ -345,7 +352,7 @@ input[type="submit"] {
   gap: 10px;
   margin-top: 60px;
   padding-left: 60px;
-  border-top: 1px solid #d2cfcf;
+  border-top: 1px solid  #d1d5db;
 }
 
 .btn-primary {
@@ -449,7 +456,7 @@ input[type="submit"] {
   position: absolute;
   right: 10px;
   top: 40%;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
   color: #aaa;
   pointer-events: none;
 }
@@ -463,8 +470,8 @@ input[type="submit"] {
 .imgs{
   align-items: center;
   background-size: cover;
-  width: 180px;
-  height: 45px;
+  width: 170px;
+  height: 35px;
 
 
 }
@@ -762,7 +769,7 @@ input[type="submit"] {
 ::ng-deep body.dark-mode .inpt{
 
   color: white;
-  background-color: #1b1b1b;;
+  background-color: #1b1b1b;
   border: none;
  
  
@@ -777,6 +784,83 @@ input[type="submit"] {
   
 
 }
+
+::ng-deep body.dark-mode .note-item:hover {
+  
+  background-color: #1b1b1b;
+  color: white;
+  border: none;
+  
+
+}
+
+::ng-deep body.dark-mode .tag1 {
+  
+  background-color: #1b1b1b;
+  color: white;
+
+  
+
+}
+::ng-deep body.dark-mode .image__hint {
+  
+  background-color: #1b1b1b;
+  color: white;
+
+  
+
+}
+
+/* arquivo: styles.css ou no css do componente com ::ng-deep */
+::ng-deep body.dark-mode .sidebar {
+  background: #1b1b1b; /* fundo escuro */
+  border-right: 1px solid #333; /* borda mais clara para contraste */
+  color: #fff; /* texto branco */
+  
+  scrollbar-color: #1b1b1b black; /* thumb cor e fundo */
+  scrollbar-width: thin;
+}
+
+::ng-deep body.dark-mode .sidebar::-webkit-scrollbar {
+  width: 15px; /* largura da barra */
+}
+
+::ng-deep body.dark-mode .sidebar::-webkit-scrollbar-track {
+  background:  black/*/* fundo da barra */
+}
+
+::ng-deep body.dark-mode .sidebar::-webkit-scrollbar-thumb {
+  background-color: #1b1b1b; /* cor da parte que se move */
+  border-radius: 10px;
+}
+
+::ng-deep body.dark-mode .sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa; /* cor quando o mouse passa */
+}
+/* Dark mode bordas */
+::ng-deep body.dark-mode .sidebar {
+  border: 1px solid #1b1b1b;  /* borda mais clara no dark mode */
+}
+
+::ng-deep body.dark-mode .right-bar {
+  border: 1px solid #1b1b1b;  /* borda mais clara no dark mode */
+}
+::ng-deep body.dark-mode .top-bar {
+  border: 1px solid #1b1b1b;  /* borda mais clara no dark mode */
+}
+
+::ng-deep body.dark-mode .editor-footer {
+  border: 1px solid #1b1b1b;  /* borda mais clara no dark mode */
+}
+
+::ng-deep body.dark-mode .editor {
+  border: 1px solid #1b1b1b;  /* borda mais clara no dark mode */
+}
+
+
+
+
+
 
 
 
