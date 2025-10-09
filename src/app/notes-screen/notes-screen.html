@@ -5,13 +5,13 @@
 />
 <header class="top-bar">
   <button class="btn2" (click)="ligarDesligarDarkMode()"><i class="fa-solid fa-moon"></i>
-    {{darkMode == true ? "Modo Claro" : "Modo Escuro"}}</button>
+    {{darkMode == true ? "Light mode" : "Dark mode"}}</button>
   <div class="logo">
     <img class="imgs"[src]="darkMode == true? 'imgs/logodarkmode.png' : 'imgs/logo.svg'">
   </div>
   <div class="search-area">
     <div class="input-icon-container">
-      <input class="inpt" type="text" placeholder="Buscar notas...">
+      <input class="inpt" type="text" placeholder="Search for notes...">
       <i class="fa-solid fa-magnifying-glass"></i>
     </div>
 
@@ -22,7 +22,7 @@
 <div class="notes-app">
   <!-- Conteúdo principal -->
   <aside class="sidebar">
-    <button class="btn-create" (click)="onNoteCreate()">+ Criar nova nota</button>
+    <button class="btn-create" (click)="onNoteCreate()">+ Create a new note</button>
 
     @for (nota of notes; track $index) {
     <div (click)="onNoteClick(nota)" class="note-item note-active">
@@ -120,7 +120,7 @@
     <div *ngIf="selectedNote" class="note-view">
       <label class="image" [style.background-image]="'url(' + (urlImagem || '') + ')'">
         <input type="file" accept="image/*" (change)="definirImagem($event)" class="upload-img" />
-        <span class="image__hint" *ngIf="!(urlImagem)">Clique para escolher uma imagem</span>
+        <span class="image__hint" *ngIf="!(urlImagem)">Click to select an image</span>
       </label>
 
 
@@ -136,7 +136,7 @@
 
         <select [(ngModel)]="tagSelecionada" id="etiqueta" class="etiquetas">
           <!-- <select [(ngModel)]="selectedNote.tags" id="etiqueta" class="etiquetas"> -->
-          <option selected disabled>Selecione uma etiqueta</option>
+          <option selected disabled>Select a label</option>
           <option value="dev">Dev</option>
           <option value="cooking">Cooking</option>
           <option value="work">Work</option>
@@ -160,14 +160,14 @@
       </form>
 
       <div class="editor-footer">
-        <button type="button" class="btn-primary" (click)="onNoteSave()">Salvar</button>
-        <button type="button" class="btn-ghost" (click)="selectedNote = null">Cancelar</button>
+        <button type="button" class="btn-primary" (click)="onNoteSave()">Save</button>
+        <button type="button" class="btn-ghost" (click)="selectedNote = null">Cancel</button>
 
       </div>
 
     </div>
   </main>
   <div class="right-bar">
-    <button (click)="onNoteDelete()" class="btn-delete">+ Excluir nota</button>
+    <button (click)="onNoteDelete()" class="btn-delete">+ Delete note</button>
   </div>
 </div>
