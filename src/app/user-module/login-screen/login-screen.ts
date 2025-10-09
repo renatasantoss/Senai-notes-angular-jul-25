@@ -97,7 +97,7 @@ export class LoginScreen {
 
       console.log("JSON", json);
 
-      let meuToken = json.accessToken;
+      let meuToken = json.token;
       let userId = json.user.id;
 
       localStorage.setItem("meuToken", meuToken);
