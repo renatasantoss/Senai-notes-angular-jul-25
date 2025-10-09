@@ -28,7 +28,7 @@ export class NotesScreen implements OnInit {
   descricaoNota = new FormControl("");
   arquivoImagem: File | null = null;  // mantém o arquivo selecionado
   urlImagem = '';                     // URL local para preview
-
+  darkMode: boolean = false;
 
   constructor(private notesService: NotesServiceTs, private cd: ChangeDetectorRef) { }
 
@@ -155,5 +155,17 @@ export class NotesScreen implements OnInit {
     this.arquivoImagem = file;
     this.urlImagem = URL.createObjectURL(file);
   }
+
+  ligarDesligarDarkMode() {
+  
+    this.darkMode = !this.darkMode;
+    
+    document.body.classList.toggle("dark-mode", this.darkMode);
+  
+    localStorage.setItem("darkMode", this.darkMode.toString())
+    
+  
+  }
+  
 
 }

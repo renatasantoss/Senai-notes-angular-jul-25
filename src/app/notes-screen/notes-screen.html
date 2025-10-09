@@ -1,7 +1,9 @@
 <!-- Topo -->
 <header class="top-bar">
+  <button class="btn2" (click)="ligarDesligarDarkMode()"><i class="fa-solid fa-moon"></i>
+    {{darkMode == true ? "Modo Claro" : "Modo Escuro"}}</button>
   <div class="logo">
-    <img src="imgs/logo.png" alt="logo-notes">
+    <img class="imgs"[src]="darkMode == true? 'imgs/logodarkmode.png' : 'imgs/logo.svg'">
   </div>
   <div class="search-area">
     <div class="input-icon-container">
