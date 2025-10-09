@@ -90,15 +90,15 @@ export class NewUserScreen {
 
 
 
-    let response = await fetch("https://senai-gpt-api.azurewebsites.net/users", {
+    let response = await fetch("http://api.senai-notes.work.gd:8080/api/usuario", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        name: name,
+        nome: name,
         email: email,
-        password: password
+        senha: password
       })
     });
 
