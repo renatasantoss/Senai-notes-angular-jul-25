@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 
 export class NotesServiceTs {
-  private apiUrl = 'http://api.senai-notes.work.gd:8080/api/notas';  // URL da sua API
+  private apiUrl = 'http://localhost:3000/notas';  // URL da sua API
 
   constructor(private http: HttpClient) {}
 
@@ -29,6 +29,6 @@ export class NotesServiceTs {
 }
 
   deleteNote(id: number): Observable<any> {
-  return this.http.delete('http://api.senai-notes.work.gd:8080/api/notas'+ id);
+  return this.http.delete(`http://localhost:3000/notas/`+ id);
 }
 }
