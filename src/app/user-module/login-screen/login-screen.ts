@@ -74,7 +74,7 @@ export class LoginScreen {
 
     }
 
-    let response = await fetch("https://senai-gpt-api.azurewebsites.net/login", {
+    let response = await fetch("http://api.senai-notes.work.gd:8080/api/auth", {
       method: "POST", // Enviar,
       headers: {
         "Content-Type" : "application/json"
