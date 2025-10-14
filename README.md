@@ -1,59 +1,51 @@
-# SenaiNotesAngularJul25
+﻿# Senai Notes (Angular)
+ 
+Senai Notes é uma aplicação web que implementa a experiência de criar, organizar e revisar notas com Angular 20. O foco é fornecer uma interface moderna para usuários autenticados gerenciarem suas anotações em qualquer dispositivo.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
+## Demonstração
+<img height="941" alt="image" src="https://github.com/user-attachments/assets/0bcaf23e-6473-4ebd-933e-3ed78850f7e6" />
 
-## Development server
+### Aplicação publicada
+https://senai-notes-angular-jul-25.vercel.app/
 
-To start a local development server, run:
+Usuário de teste:
+  - E-mail: front@email.com
+  - Senha: frontdomina 
 
-```bash
-ng serve
-```
+## Funcionalidades principais
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Autenticação** com guarda de rotas; tokens JWT são persistidos no `localStorage`.
+- **Cadastro de usuário** com fluxo de criação e redirecionamento automático para login.
+- **Lista de notas** com carregamento dinâmico da API e visualização em cards.
+- **Criação de notas** com dados padrão, imagem ilustrativa e feedback imediato ao usuário.
+- **Edição completa** de título, descrição, etiquetas e imagem (preview local da imagem enviada).
+- **Filtros por etiquetas** consumindo o catálogo fornecido pela API.
+- **Excluir notas** notas diretamente da tela principal.
 
-## Code scaffolding
+## Arquitetura e tecnologias
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Angular 20 com componentes standalone e `ChangeDetection` manual onde necessário.
+- TypeScript 5.9 e RxJS para composições assíncronas (`firstValueFrom`).
+- Angular Router com guarda de autenticação (`authGuard`) e lazy loading de componentes.
+- Angular Forms: reativos para telas de login/cadastro e template-driven para edição de notas.
+- HTTPClient para buscas/cadastro/login e `fetch` nativo para operações de atualização pontual.
+- Font Awesome via CDN para ícones.
+- Deploy contínuo na Vercel, consumindo a API `https://senai-gpt-api.azurewebsites.net/`.
 
-```bash
-ng generate component component-name
-```
+## Integração com a API
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+| Recurso | Rotas consumidas |
+|---------|-----------------|
+| Autenticação | `POST /login` |
+| Usuários | `POST /users` |
+| Notas | `GET /senainotes/notes`, `POST /senainotes/notes`, `PUT /senainotes/notes/{id}`, `PATCH /senainotes/notes/{id}`, `DELETE /senainotes/notes/{id}` |
+| Etiquetas | `GET /senainotes/tags` |
 
-```bash
-ng generate --help
-```
+Os tokens retornados no login são salvos localmente e enviados via header `Authorization` quando presentes.
 
-## Building
+## Organização do código
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `src/app/components`: componentes reutilizáveis (`header`, `left-panel`, `notes-list`, `note`, `note-options`).
+- `src/app/notes-screen`: composição da tela principal com comunicação entre componentes.
+- `src/app/user-module`: telas de autenticação (`login` e `novo usuário`).
+- `src/app/auth.guard.ts`: guarda de rota que bloqueia acesso sem token.
