@@ -96,7 +96,7 @@ export class NotesScreen implements OnInit {
 
 
   // Método para excluir uma nota
-  onNoteDelete(): void {
+  async onNoteDelete(): Promise<void> {
     if (!this.selectedNote) {
       alert('Selecione uma nota para excluir.');
       return;
@@ -104,10 +104,12 @@ export class NotesScreen implements OnInit {
 
     const confirmDelete = confirm(`Tem certeza que deseja excluir a nota "${this.selectedNote.titulo}"?`);
     if (confirmDelete) {
-      this.notesService.deleteNote(this.selectedNote.id).subscribe(() => {
-        this.selectedNote = null;   // Limpa a seleção
-        this.getNotes();            // Atualiza a lista
-      });
+      
+      let deleteResponse = await this.notesService.deleteNote(this.selectedNote.id);
+
+      this.selectedNote = null;   // Limpa a seleção
+      this.getNotes();            // Atualiza a lista
+    
     }
   }
 

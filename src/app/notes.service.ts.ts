@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { firstValueFrom, Observable } from 'rxjs';
 
 
 @Injectable({
@@ -43,12 +43,26 @@ export class NotesServiceTs {
 
 }
 
-  deleteNote(id: number): Observable<any> {
-  return this.http.delete(`https://senai-gpt-api.azurewebsites.net/senainotes/notesg2/`+ id, {
-      headers: {
-        "Content-Type" : "application/json",
-        "Authorization" : "Bearer " + localStorage.getItem("meuToken")
-      }
-    });
-}
+  async deleteNote(id: number): Promise<any> {
+
+    let response = null;
+
+    try {
+      
+      response = await firstValueFrom(this.http.delete(`https://senai-gpt-api.azurewebsites.net/senainotes/notesg2/`+ id, {
+        headers: {
+          "Content-Type" : "application/json",
+          "Authorization" : "Bearer " + localStorage.getItem("meuToken")
+        }
+      }));
+
+    } catch (error) {
+      
+      console.log("Deu erro no delete. Try catch funcionando.");
+
+    }
+
+    return response;
+
+  }
 }
