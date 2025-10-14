@@ -8,27 +8,47 @@ import { Observable } from 'rxjs';
 })
 
 export class NotesServiceTs {
-  private apiUrl = 'http://localhost:3000/notas';  // URL da sua API
+  private apiUrl = 'https://senai-gpt-api.azurewebsites.net/senainotes/notesg2';  // URL da sua API
 
   constructor(private http: HttpClient) {}
 
   // Método GET para buscar as notas
   getNotes(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+    return this.http.get<any[]>(this.apiUrl, {
+      headers: {
+        "Content-Type" : "application/json",
+        "Authorization" : "Bearer " + localStorage.getItem("meuToken")
+      }
+    });
   }
 
   // Método PUT para salvar a nota após edição
   saveNote(note: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/${note.id}`, note);
+    return this.http.put<any>(`${this.apiUrl}/${note.id}`, note, {
+      headers: {
+        "Content-Type" : "application/json",
+        "Authorization" : "Bearer " + localStorage.getItem("meuToken")
+      }
+    });
   }
 
   // Método POST para criar uma nova nota
   createNote(note: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, note);
+    return this.http.post<any>(this.apiUrl, note, {
+      headers: {
+        "Content-Type" : "application/json",
+        "Authorization" : "Bearer " + localStorage.getItem("meuToken")
+      }
+    });
 
 }
 
   deleteNote(id: number): Observable<any> {
-  return this.http.delete(`http://localhost:3000/notas/`+ id);
+  return this.http.delete(`https://senai-gpt-api.azurewebsites.net/senainotes/notesg2/`+ id, {
+      headers: {
+        "Content-Type" : "application/json",
+        "Authorization" : "Bearer " + localStorage.getItem("meuToken")
+      }
+    });
 }
 }
