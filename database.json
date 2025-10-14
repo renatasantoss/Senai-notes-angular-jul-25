@@ -1,7 +1,47 @@
 {
   "notas": [
     {
+<<<<<<< HEAD
       "id": "bd7b",
+=======
+      "id": "648e",
+      "titulo": "Marvel",
+      "descricao": "A Marvel Entertainment foi fundada em 1939, nos Estados Unidos, por Martin Goodman. A empresa, conhecida originalmente pelos quadrinhos, se transformou em uma das principais empresas do entretenimento mundial, com grande presença entre os filmes de maior bilheteria da história.\n",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "home"
+      ],
+      "dataCriacao": "2025-10-03T23:43:22.270Z",
+      "dataAtualizacao": "2025-10-03T23:43:22.270Z"
+    },
+    {
+      "id": "e129",
+      "titulo": "teste12e",
+      "descricao": "Descrição da nova notarthbstrhsss",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-04T00:08:52.317Z",
+      "dataAtualizacao": "2025-10-04T00:08:52.317Z"
+    },
+    {
+      "id": "d9e1",
+      "titulo": "New",
+      "descricao": "Descrição da nova notawmklqnddddddddddddddddd",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-07T23:57:41.893Z",
+      "dataAtualizacao": "2025-10-07T23:57:41.893Z"
+    },
+    {
+      "id": "ab29",
+>>>>>>> cd09743e79e068b6812929613f9d77d6aeccb41f
       "titulo": "Novo Titulo",
       "descricao": "Descrição da nova nota",
       "imagemUrl": "link da imagem",
@@ -9,8 +49,193 @@
       "tags": [
         "Tag 1"
       ],
+<<<<<<< HEAD
       "dataCriacao": "2025-10-14T00:27:30.025Z",
       "dataAtualizacao": "2025-10-14T00:27:30.025Z"
+=======
+      "dataCriacao": "2025-10-07T23:57:42.644Z",
+      "dataAtualizacao": "2025-10-07T23:57:42.644Z"
+    },
+    {
+      "id": "9972",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-07T23:57:43.118Z",
+      "dataAtualizacao": "2025-10-07T23:57:43.118Z"
+    },
+    {
+      "id": "1ae2",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-07T23:57:43.360Z",
+      "dataAtualizacao": "2025-10-07T23:57:43.360Z"
+    },
+    {
+      "id": "d685",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-08T22:08:28.496Z",
+      "dataAtualizacao": "2025-10-08T22:08:28.496Z"
+    },
+    {
+      "id": "76c8",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-08T22:18:36.739Z",
+      "dataAtualizacao": "2025-10-08T22:18:36.739Z"
+    },
+    {
+      "id": "d62b",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-08T22:18:37.777Z",
+      "dataAtualizacao": "2025-10-08T22:18:37.777Z"
+    },
+    {
+      "id": "4d04",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-08T22:18:37.994Z",
+      "dataAtualizacao": "2025-10-08T22:18:37.994Z"
+    },
+    {
+      "id": "b473",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-08T22:18:38.356Z",
+      "dataAtualizacao": "2025-10-08T22:18:38.356Z"
+    },
+    {
+      "id": "36af",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-09T22:28:38.778Z",
+      "dataAtualizacao": "2025-10-09T22:28:38.778Z"
+    },
+    {
+      "id": "0011",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-09T22:28:39.907Z",
+      "dataAtualizacao": "2025-10-09T22:28:39.907Z"
+    },
+    {
+      "id": "94ac",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-09T22:30:03.797Z",
+      "dataAtualizacao": "2025-10-09T22:30:03.797Z"
+    },
+    {
+      "id": "caff",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-09T22:35:31.021Z",
+      "dataAtualizacao": "2025-10-09T22:35:31.021Z"
+    },
+    {
+      "id": "5cd5",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-09T22:58:55.561Z",
+      "dataAtualizacao": "2025-10-09T22:58:55.561Z"
+    },
+    {
+      "id": "db14",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-09T22:58:56.096Z",
+      "dataAtualizacao": "2025-10-09T22:58:56.096Z"
+    },
+    {
+      "id": "0cfe",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-09T22:58:56.311Z",
+      "dataAtualizacao": "2025-10-09T22:58:56.311Z"
+    },
+    {
+      "id": "e7a7",
+      "titulo": "Novo Titulo",
+      "descricao": "Descrição da nova nota",
+      "imagemUrl": "link da imagem",
+      "usuarioId": 1,
+      "tags": [
+        "Tag 1"
+      ],
+      "dataCriacao": "2025-10-09T23:23:14.032Z",
+      "dataAtualizacao": "2025-10-09T23:23:14.032Z"
+>>>>>>> cd09743e79e068b6812929613f9d77d6aeccb41f
     }
   ]
 }

@@ -438,7 +438,6 @@ input[type="submit"] {
 
 }
 
-.class last-edited {}
 
 .input-icon-container {
   position: relative;
@@ -477,40 +476,54 @@ input[type="submit"] {
 }
 
 
+/* Seu CSS base permanece igual até aqui... */
+
+/* Responsivo para telas até 768px */
 @media (max-width: 768px) {
   /* Layout principal em coluna */
   .notes-app {
     flex-direction: column;
+    height: auto; /* Para não ficar preso na altura fixa */
   }
 
-  /* Barra lateral vai para o topo */
+  /* Sidebar no topo */
   .sidebar {
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #e5e7eb;
     padding: 10px;
+    max-height: 200px; /* opcional para não ocupar muito espaço */
+    overflow-y: auto;
   }
 
+  /* Botão criar ocupa 100% */
   .btn-create {
     width: 100%;
     font-size: 1rem;
     padding: 10px;
+    margin-bottom: 15px;
   }
 
   /* Conteúdo principal ocupa toda a largura */
   .content {
     width: 100%;
     padding: 10px;
+    height: auto;
   }
 
+  /* Cabeçalho da nota */
   .note-head {
     padding: 0 10px;
   }
 
+  /* Título da nota maior mas adaptado */
   .note-title-display {
     font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
+  /* Editor com padding menor */
   .editor {
     padding: 0 10px;
   }
@@ -520,6 +533,7 @@ input[type="submit"] {
     min-height: 150px;
   }
 
+  /* Footer dos botões em coluna */
   .editor-footer {
     flex-direction: column;
     align-items: stretch;
@@ -527,13 +541,14 @@ input[type="submit"] {
     padding-right: 10px;
   }
 
+  /* Botões salvar e cancelar ocupam 100% */
   .btn-primary,
   .btn-ghost {
     width: 100%;
     margin-top: 10px;
   }
 
-  /* Right-bar (lixeira) vai para baixo */
+  /* Right-bar (onde está o delete) embaixo */
   .right-bar {
     width: 100%;
     border-left: none;
@@ -545,12 +560,12 @@ input[type="submit"] {
     width: 100%;
   }
 
-  /* Imagem de capa responsiva */
+  /* Imagem de capa menor e responsiva */
   .image {
     height: 200px;
   }
 
-  /* Barra superior */
+  /* Barra superior empilhada */
   .top-bar {
     flex-direction: column;
     gap: 10px;
@@ -558,17 +573,19 @@ input[type="submit"] {
     text-align: center;
   }
 
+  /* Área de busca vertical */
   .search-area {
     flex-direction: column;
     width: 100%;
   }
 
+  /* Input da busca full width */
   .search-area input {
     width: 100%;
     padding: 10px 30px;
   }
 
-  /* Ícone dentro do input */
+  /* Ícone dentro do input adaptado */
   .input-icon-container {
     width: 100%;
   }
@@ -577,7 +594,7 @@ input[type="submit"] {
     right: 15px;
   }
 
-  /* Lista de notas */
+  /* Itens da lista de notas mais compactos */
   .note-item {
     flex-direction: row;
     align-items: center;
@@ -592,30 +609,37 @@ input[type="submit"] {
     flex: 1;
   }
 
+  /* Thumbs menores */
   .thumb1, .thumb2, .thumb3, .thumb4, .thumb5, .thumb6, .thumb7 {
     width: 40px;
     height: 50px;
     margin-right: 10px;
   }
 
+  /* Tags se adaptam */
   .note-tags {
     flex-wrap: wrap;
   }
 
+  /* Select etiquetas full width e margin ajustada */
   .etiquetas {
     float: none;
     margin: 10px 0;
     width: 100%;
   }
 
+  /* Meta da nota vertical */
   .note-meta-row {
     flex-direction: column;
     gap: 5px;
   }
 
+  /* Tags menores */
   .tags .tag {
     font-size: 0.8rem;
-  }}
+  }
+}
+
 
   ::ng-deep body.dark-mode .top-bar{
 
